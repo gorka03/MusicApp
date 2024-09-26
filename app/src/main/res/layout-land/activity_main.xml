@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageSong2"
+        android:layout_width="308dp"
+        android:layout_height="282dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/InicioCancion"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BarraVolumen"
+        app:srcCompat="@drawable/foto"
+        tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck,MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButtonLetra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/BotonLetra"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonCompartir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageSong2"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonCancionAnterior"
+        app:srcCompat="@android:drawable/ic_menu_sort_alphabetically"
+        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/NombreGrupo"
+        android:layout_width="125dp"
+        android:layout_height="21dp"
+        android:text="@string/NombreGrupo"
+        app:layout_constraintBottom_toTopOf="@+id/BarraCancion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageSong2"
+        app:layout_constraintTop_toBottomOf="@+id/NombreCancion"
+        tools:ignore="MissingConstraints,TextSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSiguienteCancion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/BotonCancionSiguiente"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonListado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonPausar"
+        app:layout_constraintTop_toBottomOf="@+id/BarraCancion"
+        app:srcCompat="@android:drawable/ic_media_next"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPausar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/BotonPausar"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonCompartir"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonSiguienteCancion"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonCancionAnterior"
+        app:layout_constraintTop_toBottomOf="@+id/BarraCancion"
+        app:srcCompat="@android:drawable/ic_media_pause"
+        tools:ignore="ContentDescription,ImageContrastCheck,ImageContrastCheck,MissingConstraints,DuplicateClickableBoundsCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButtonListado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/BotonListado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonCompartir"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonSiguienteCancion"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size"
+        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCancionAnterior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/BotonCancionAnterior"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonLetra"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonPausar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageSong2"
+        app:layout_constraintTop_toBottomOf="@+id/BarraCancion"
+        app:srcCompat="@android:drawable/ic_media_previous"
+        tools:ignore="ContentDescription,MissingConstraints,DuplicateSpeakableTextCheck,ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCompartir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/BotonCompartir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonListado"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonLetra"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonPausar"
+        app:srcCompat="@android:drawable/ic_menu_share"
+        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/InicioCancion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/InicioCancion"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonCancionAnterior"
+        app:layout_constraintEnd_toStartOf="@+id/BarraCancion"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageSong2"
+        app:layout_constraintTop_toBottomOf="@+id/NombreGrupo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/FinalCancion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/FinalCancion"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonSiguienteCancion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/BarraCancion"
+        app:layout_constraintTop_toBottomOf="@+id/NombreGrupo"
+        tools:ignore="MissingConstraints" />
+
+    <SeekBar
+        android:id="@+id/BarraCancion"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="288dp"
+        android:layout_height="63dp"
+        android:max="100"
+        android:progress="25"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonPausar"
+        app:layout_constraintEnd_toStartOf="@+id/FinalCancion"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/InicioCancion"
+        app:layout_constraintTop_toBottomOf="@+id/NombreGrupo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/NombreCancion"
+        android:layout_width="129dp"
+        android:layout_height="21dp"
+        android:text="@string/NombreCancion"
+        app:layout_constraintBottom_toTopOf="@+id/NombreGrupo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageSong2"
+        app:layout_constraintTop_toBottomOf="@+id/BarraVolumen"
+        tools:ignore="MissingConstraints,TextSizeCheck" />
+
+    <SeekBar
+        android:id="@+id/BarraVolumen"
+        android:layout_width="301dp"
+        android:layout_height="29dp"
+        android:max="100"
+        android:progress="70"
+        app:layout_constraintBottom_toTopOf="@+id/imageSong2"
+        app:layout_constraintEnd_toStartOf="@+id/NombreCancion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,VisualLintBounds" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
